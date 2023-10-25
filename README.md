@@ -63,36 +63,38 @@ For more information on the importance of a professional README for your reposit
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Blog_App] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[BlogApp]** The Blog app will be a classic example of a blog website. It is a functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts. It has been made by the following ER diagram.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+
 
 <details>
-  <summary>Client</summary>
+  <summary>Ruby</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
   </ul>
 </details>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
+
 
 <details>
 <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Ruby On Rails</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby On Rails</a></li>
   </ul>
 </details>
 
@@ -102,9 +104,10 @@ For more information on the importance of a professional README for your reposit
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Contains User table]**
+- **[User can create a post]**
+- **[Each Post can be liked or comented on]**
+- **[A user can comment or like a post]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,9 +115,9 @@ For more information on the importance of a professional README for your reposit
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+> NOT DEPLOYED
 
-- [Live Demo Link](https://google.com)
+- [###](https://google.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,51 +133,48 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<!--
-Example command:
+[1] Ruby installed in your system
+[2] RubyOnRails installed in your system
+[3] PostgreSql installed in your system
 
-```sh
- gem install rails
-```
- -->
+
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
+
+
 
 ```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/BonkeGcobo/blogAppRor/tree/create-data-model
+  cd blogAppRor
 ```
---->
+
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
+
+
 
 ```sh
-  cd my-project
-  gem install
+  cd blogAppRor
+  bundle install
 ```
---->
+
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
+
 
 ```sh
   rails server
 ```
---->
+
 
 ### Run tests
 
@@ -208,17 +208,10 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Bonke Gcobo**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/bonkegcobo)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bonkegcobo)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
