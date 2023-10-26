@@ -1,15 +1,13 @@
 class Post < ApplicationRecord
-    belongs_to :user
-    has_many :comments
-    has_many :likes
+  belongs_to :user
+  has_many :comments
+  has_many :likes
 
-    def update_counter
-        user.increment!(:post_counter)
-    end
+  def update_counter
+    user.increment!(:post_counter)
+  end
 
-    def recent_comments
-        self.comments.order(created_at: :desc).limit(5)
-    end
-
-
+  def recent_comments
+    comments.order(created_at: :desc).limit(5)
+  end
 end
