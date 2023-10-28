@@ -58,4 +58,24 @@ RSpec.describe Post, type: :model do
 
   end
 
+    it "tests the recent comments custom model method" do
+      user = FactoryBot.create(:user)
+      postUser = FactoryBot.create(:post, author: user)
+  
+      # Create comments associated with the post and the user
+      comment0 = FactoryBot.create(:comment, author: user, post: postUser)
+      comment1 = FactoryBot.create(:comment, author: user, post: postUser)
+      comment2 = FactoryBot.create(:comment, author: user, post: postUser)
+      comment3 = FactoryBot.create(:comment, author: user, post: postUser)
+      comment4 = FactoryBot.create(:comment, author: user, post: postUser)
+      comment5 = FactoryBot.create(:comment, author: user, post: postUser)
+  
+      # Call the custom method to get the recent comments
+      recent_comments = postUser.recent_comments
+  
+      # Assertions
+      expect(recent_comments.length).to eq(5) # Ensure you get five comments
+        
+    end
+
 end
