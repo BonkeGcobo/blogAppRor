@@ -26,4 +26,5 @@ RSpec.describe User, type: :model do
     subject.post_counter = true
     expect(subject).to_not be_valid
   end
+
 end
