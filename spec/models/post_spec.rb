@@ -46,4 +46,16 @@ RSpec.describe Post, type: :model do
     Post.new(author: @user, Title: 'A' * 251, comments_counter: 0, likes_counter: 3.21)
     expect(subject).to_not be_valid
   end
+
+  it "Test the update counter custom method" do
+    user = FactoryBot.create(:user, post_counter:0)
+    post_1 = FactoryBot.create(:post,author:user)
+    post_2 = FactoryBot.create(:post,author:user)
+    post_3 = FactoryBot.create(:post,author:user)
+
+    expect(user.post_counter).to_not be(1)
+    expect(user.post_counter).to be(3)
+
+  end
+
 end
