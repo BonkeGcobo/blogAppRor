@@ -65,7 +65,7 @@ For more information on the importance of a professional README for your reposit
 
 # 📖 [Blog_App] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+
 
 **[BlogApp]** The Blog app will be a classic example of a blog website. It is a functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts. It has been made by the following ER diagram.
 
@@ -102,7 +102,7 @@ For more information on the importance of a professional README for your reposit
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+
 
 - **[Contains User table]**
 - **[User can create a post]**
@@ -115,7 +115,7 @@ For more information on the importance of a professional README for your reposit
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> NOT DEPLOYED
+
 
 - [###](https://google.com)
 
@@ -207,7 +207,7 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+
 
 👤 **Bonke Gcobo**
 
