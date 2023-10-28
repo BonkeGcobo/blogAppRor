@@ -26,22 +26,20 @@ RSpec.describe User, type: :model do
     subject.post_counter = true
     expect(subject).to_not be_valid
   end
-  
 
-  it "test if the recent post custom model method works" do
+  it 'test if the recent post custom model method works' do
     user = FactoryBot.create(:user)
-    posts = FactoryBot.create_list(:post,6,author:user)
+    FactoryBot.create_list(:post, 6, author: user)
     recent_posts = user.recent_post
     expect(recent_posts.length).to eq(3)
   end
 
-  it "Check if the recent data is in decending order" do
+  it 'Check if the recent data is in decending order' do
     user = FactoryBot.create(:user)
-    posts = FactoryBot.create_list(:post,6,author:user)
+    FactoryBot.create_list(:post, 6, author: user)
     recent_posts = user.recent_post
 
     expect(recent_posts[0].created_at).to be > recent_posts[1].created_at
     expect(recent_posts[1].created_at).to be > recent_posts[2].created_at
   end
-
 end

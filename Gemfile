@@ -7,7 +7,6 @@ ruby '3.0.2'
 gem 'factory_bot_rails'
 gem 'faker'
 
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.1'
 

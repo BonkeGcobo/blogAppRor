@@ -47,35 +47,32 @@ RSpec.describe Post, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "Test the update counter custom method" do
-    user = FactoryBot.create(:user, post_counter:0)
-    post_1 = FactoryBot.create(:post,author:user)
-    post_2 = FactoryBot.create(:post,author:user)
-    post_3 = FactoryBot.create(:post,author:user)
+  it 'Test the update counter custom method' do
+    user = FactoryBot.create(:user, post_counter: 0)
+    FactoryBot.create(:post, author: user)
+    FactoryBot.create(:post, author: user)
+    FactoryBot.create(:post, author: user)
 
     expect(user.post_counter).to_not be(1)
     expect(user.post_counter).to be(3)
-
   end
 
-    it "tests the recent comments custom model method" do
-      user = FactoryBot.create(:user)
-      postUser = FactoryBot.create(:post, author: user)
-  
-      # Create comments associated with the post and the user
-      comment0 = FactoryBot.create(:comment, author: user, post: postUser)
-      comment1 = FactoryBot.create(:comment, author: user, post: postUser)
-      comment2 = FactoryBot.create(:comment, author: user, post: postUser)
-      comment3 = FactoryBot.create(:comment, author: user, post: postUser)
-      comment4 = FactoryBot.create(:comment, author: user, post: postUser)
-      comment5 = FactoryBot.create(:comment, author: user, post: postUser)
-  
-      # Call the custom method to get the recent comments
-      recent_comments = postUser.recent_comments
-  
-      # Assertions
-      expect(recent_comments.length).to eq(5) # Ensure you get five comments
-        
-    end
+  it 'tests the recent comments custom model method' do
+    user = FactoryBot.create(:user)
+    post_user = FactoryBot.create(:post, author: user)
 
+    # Create comments associated with the post and the user
+    FactoryBot.create(:comment, author: user, post: post_user)
+    FactoryBot.create(:comment, author: user, post: post_user)
+    FactoryBot.create(:comment, author: user, post: post_user)
+    FactoryBot.create(:comment, author: user, post: post_user)
+    FactoryBot.create(:comment, author: user, post: post_user)
+    FactoryBot.create(:comment, author: user, post: post_user)
+
+    # Call the custom method to get the recent comments
+    recent_comments = post_user.recent_comments
+
+    # Assertions
+    expect(recent_comments.length).to eq(5) # Ensure you get five comments
+  end
 end
