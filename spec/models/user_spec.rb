@@ -4,7 +4,6 @@ RSpec.describe User, type: :model do
     #tests go here
     subject{User.new(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', post_counter:0)}
     
-    
     before{subject.save}
 
     it 'Name should be not blank' do
