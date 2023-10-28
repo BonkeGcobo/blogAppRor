@@ -24,4 +24,17 @@ RSpec.describe Comment, type: :model do
         end
     end
 
+
+    describe "Test for custom methods" do
+        it 'increments the comments of the associated post' do
+            user = FactoryBot.create(:user)
+            post = FactoryBot.create(:post, likes_counter: 0, comments_counter:0)
+            comment = FactoryBot.create(:comment, post: post, author: user)
+      
+            
+            # Expect that the likes_counter of the post has been incremented by 1
+            expect(post.comments_counter).to eq(1)
+        end
+    end
+
 end
