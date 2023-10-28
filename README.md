@@ -113,9 +113,6 @@ For more information on the importance of a professional README for your reposit
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-
 
 - [###](https://google.com)
 
@@ -189,9 +186,7 @@ Example command:
 ```
 --->
 
-### Deployment
 
-Not deployed
 
 <!--
 Example:
@@ -222,9 +217,9 @@ Example:
 
 > 
 
-- [ ] **[coming soon]**
-- [ ] **[coming soon]**
-- [ ] **[coming soon]**
+- [ ] **[Add views]**
+- [ ] **[Add authentication]**
+- [ ] **[Beautify UI]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
