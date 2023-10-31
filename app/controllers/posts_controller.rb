@@ -1,9 +1,7 @@
 class PostsController < ApplicationController
+  def index; end
 
-    def index
-    end
-
-    def show
-        @params = params[:id]
-    end
+  def show
+    @params = params[:id]
+  end
 end
