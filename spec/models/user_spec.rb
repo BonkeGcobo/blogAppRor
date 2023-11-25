@@ -34,6 +34,12 @@ RSpec.describe User, type: :model do
     expect(recent_posts.length).to eq(3)
   end
 
+  it "Test if the post counter is updated after creating new post" do
+    user=FactoryBot.create(:user)
+    FactoryBot.create_list(:post, 1, author:user)
+    expect(user.post_counter).to eq(1)
+  end
+
   it 'Check if the recent data is in decending order' do
     user = FactoryBot.create(:user)
     FactoryBot.create_list(:post, 6, author: user)
