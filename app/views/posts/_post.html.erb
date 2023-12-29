@@ -1,0 +1,41 @@
+<style>
+  .post-container {
+  position: relative;
+  border: 1px solid #000;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.post {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.comments {
+  border: 1px solid #000;
+  width: 60%;
+  margin: 0 auto;
+}
+
+</style>
+
+<div class="post-container" id=<%=post.id%> style="cursor:pointer">
+   <h3 class='post-title'>
+      <%= post.Title %>
+   </h3>
+   <p><%= post.Text %></p>
+   <div class='like-comment' style="display:flex; gap:0.5rem">
+     <p>Likes: <%= post.likes_counter %></p>
+     <p>Comments: <%= post.comments_counter %></p>
+   </div>
+   <button class='see-post' id=<%=post.id%>>
+      see post
+   </button>
+</div>
+
+<div class='comments'>
+    <%= render partial: 'comment', collection: post.recent_comments %>
+</div>
+
+

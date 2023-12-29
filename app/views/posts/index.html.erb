@@ -1,1 +1,35 @@
-<h1>Posts belonging to a user</h1>
+<style>
+   .top-part {
+    width:45%;
+    margin: 0 auto;
+    padding: 0.5rem
+   }
+</style>
+
+
+<section data-user-id=<%= @user.id %> id=<%= @user.id %> class='top-part' style="display:flex; align-items:center; gap:1.2rem; margin-top:0.5rem; border: 1px solid #000; cursor:pointer">
+  <img src="<%= @user.photo %>" alt="user-photo" width="100" height="100">
+  <h3><%= @user.name %></h3>
+  <p>Number of posts: <%= @user.post_counter %></p>
+</section>
+
+
+<section>
+   <%=render partial: 'post', collection: @user_posts%>
+</section>
+
+
+<script>
+    const userID = document.querySelector('.top-part').id
+    
+    const seePostBtn = document.querySelectorAll(".see-post")
+    seePostBtn.forEach((btn)=>{
+      btn.addEventListener("click",(e)=>{
+         window.location.href=`${window.location.origin}/users/${userID}/posts/${e.target.id}`
+      })
+    })
+</script>
+
+
+
+

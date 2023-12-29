@@ -1,2 +1,37 @@
-<h1>Here is one user</h1>
-<p>User with id: <%= params[:id] %></p>
+<section id=<%= @user.id %> class='top-part' style="display:flex; align-items:center; gap:1.2rem; margin-top:0.5rem; border: 1px solid #000; cursor:pointer">
+  <img src="<%= @user.photo %>" alt="user-photo" width="100" height="100">
+  <h3><%= @user.name %></h3>
+  <p>Number of posts:<%= @user.post_counter %></p>
+</section>
+
+
+
+<section  class='Bio-section' style='width: 45%; border:1px solid #000; margin:1.25rem auto; padding:0.5rem'>
+  <h1>Bio</h1>
+
+  <div class="bio" >
+  <p>
+    <%= @user.bio%>
+  </p>
+  </div>
+</section>
+
+
+<section class='post-section'>
+  <%= render partial: 'post', collection: @posts %>
+</section>
+
+<section style="margin: 2px auto; width:100px"  class='btn'>
+   <button>See All Posts</button>
+</section>
+
+
+<script>
+   const getPost= document.querySelector('.top-part')
+   getPost.addEventListener('click', (e)=>{
+     window.location.href = `${window.location.origin}/users/${event.target.id}/posts`
+   })
+</script>
+
+
+
